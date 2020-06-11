@@ -308,6 +308,8 @@ message RegionHeartbeatRequest {
     // Term is the term of raft group.
     uint64 term = 14;
     replication_modepb.RegionReplicationStatus replication_status = 15;
+    // Grpc info in the region
+    repeated RecordPair grpc_infos = 16;
 }
 
 message ChangePeer {

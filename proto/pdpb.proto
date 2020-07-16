@@ -323,6 +323,7 @@ message RegionHeartbeatRequest {
     // Term is the term of raft group.
     uint64 term = 14;
     replication_modepb.RegionReplicationStatus replication_status = 15;
+    QueryStats queryStats = 16;
 }
 
 message ChangePeer {
@@ -598,4 +599,14 @@ message GetOperatorResponse {
     bytes desc = 3;
     OperatorStatus status = 4;
     bytes kind = 5;
+}
+
+message QueryStats {
+    uint64 GC = 1;
+    uint64 Get = 2;
+    uint64 Scan = 3;
+    uint64 Coprocessor = 4;
+    uint64 Delete = 5;
+    uint64 DeleteRange = 6;
+    uint64 Put = 7;
 }

@@ -91,6 +91,7 @@ message TokenBucketsRequest {
   repeated TokenBucketRequest requests = 1;
   uint64 target_request_period_ms = 2;
   uint64 client_unique_id = 3;
+  uint64 waitDurationMs = 4;
 }
 
 message TokenBucketRequest {
